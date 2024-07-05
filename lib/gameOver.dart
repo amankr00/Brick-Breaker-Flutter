@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class GameOver extends StatelessWidget{
 final bool isGameOver;
 final function;
 
-static var gameFont = GoogleFonts.pressStart2p(
-textStyle : TextStyle(
-color : Colors.deepPurple , letterSpacing: 0 , fontSize: 24));
 
 GameOver({required this.isGameOver , this.function});
 
@@ -18,7 +15,11 @@ return isGameOver ? Stack(
   Container(
   alignment: Alignment(0,-0.3),
   child : Text('G A M E  O V E R',
-  style: gameFont),
+  style: TextStyle(
+  fontFamily: 'press',
+  fontSize: 24,
+  color: Colors.deepPurple
+  )),
   ),
   Container(
   alignment: Alignment(0,0),
